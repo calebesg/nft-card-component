@@ -6,6 +6,8 @@
   --dark-blue-card:hsl(216, 50%, 16%);
   --dark-blue-line:hsl(215, 32%, 27%);
   --white:hsl(0, 0%, 100%);
+
+  --trans-houver: all 200ms ease-in-out;
 }
 
 * {
@@ -40,22 +42,41 @@ main>h1 {
 
 .nft-panel {
   position: relative;
+  width: 100%;
+  padding: 0;
 }
 
-.nft-panel img:first-of-type {
+.nft-panel>img {
   width: 100%;
+  height: 100%;
   border-radius: 5px;
 }
 
-.nft-panel img:last-of-type {
+.nft-panel .img-wrapper {
   position: absolute;
-  left: calc(50% - 24px);
-  top: calc(50% - 24px); 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background-color: hsla(178, 100%, 50%, 0.2);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transition: var(--trans-houver);
+}
+
+.nft-panel .img-wrapper:hover {
+  opacity: 1;
 }
 
 main h2 {
   color: var(--white);
   padding: 20px 0;
+  transition: var(--trans-houver);
   cursor: pointer;
 }
 
@@ -105,6 +126,7 @@ main .line {
 
 .avatar figcaption span {
   color: var(--white);
+  transition: var(--trans-houver);
   cursor: pointer;
 }
 

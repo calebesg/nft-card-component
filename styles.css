@@ -21,7 +21,7 @@
 
 body {
   font-family: "Outfit", sans-serif;
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   color: var(--soft-blue);
   min-height: 100vh;
   background-color: var(--dark-blue-main);
@@ -43,10 +43,10 @@ ul {
 /* CARD ===================================== */
 
 main {
-  max-width: 350px;
-  padding: 20px;
+  max-width: 21.875rem;
+  padding: 1.25rem;
   background-color: var(--dark-blue-card);
-  border-radius: 10px;
+  border-radius: 0.625rem;
 }
 
 main h1 {
@@ -66,7 +66,7 @@ main h1 {
   left: 0;
   right: 0;
   bottom: 0;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   background: url(./images/icon-view.svg) center no-repeat var(--alpha-cyan);
   opacity: 0;
   transition: var(--trans-hover);
@@ -78,15 +78,15 @@ main h1 {
 
 .nft-image img {
   width: 100%;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
 }
 
 /* CARD body ================================== */
 
 .title {
-  margin: 20px 0;
+  margin: 1.25rem 0;
   width: fit-content;
-  font-size: 1.4rem;
+  font-size: 1.4375rem;
   color: var(--white);;
 }
 
@@ -101,14 +101,14 @@ main h1 {
 
 .description {
   font-weight: 300;
-  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 .info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .info li {
@@ -117,7 +117,7 @@ main h1 {
 }
 
 .info img {
-  margin-right: 6px;
+  margin-right: 0.3125rem;
 }
 
 .info .price strong {
@@ -129,19 +129,19 @@ main h1 {
 
 .author {
   border-top: 1px solid var(--dark-blue-line);
-  padding: 15px 0;
+  padding: 1rem 0;
   
   display: flex;
   align-items: center;
 }
 
 .author img {
-  max-width: 35px;
+  max-width: 2.1875rem;
   padding: 1px;
   border: none;
   border-radius: 50%;
   background-color: var(--white);
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
 .author figcaption a {

@@ -18,36 +18,31 @@
   <main>
     <h1 class="sr-only">NFT card component</h1>
 
-    <figure class="nft-panel">
-
-      <img src="./images/image-equilibrium.jpg" alt="Balanced Cube">
-      
-      <div class="img-wrapper" role="presentation">
-        <img src="./images/icon-view.svg" alt="">
-      </div>
-    </figure>
+    <a class="nft-image" href="./images/image-equilibrium.jpg" target="_blank">
+      <img src="./images/image-equilibrium.jpg" alt="equilibrium cube">
+    </a>
     
-    <h2>Equilibrium #3429</h2>
+    <h2 class="title"><a href="#">Equilibrium #3429</a></h2>
 
-    <p>Our Equilibrium collection promotes balance and calm.</p>
+    <p class="description">Our Equilibrium collection promotes balance and calm.</p>
 
-    <div class="data-post-info" role="presentation">
-      <figure>
-        <img src="./images/icon-ethereum.svg" alt="Ethereum icon">
-        <figcaption><strong>0.041 ETH</strong></figcaption>
-      </figure>
+    <ul class="info">
+      <li class="price">
+        <img src="./images/icon-ethereum.svg" alt="" aria-hidden="true">
+        <p><strong>0.041 ETH</strong></p>
+      </li>
 
-      <figure>
-        <img src="./images/icon-clock.svg" alt="Clock icon">
-        <figcaption>3 days left</figcaption>
-      </figure>
-    </div>
+      <li class="time">
+        <img src="./images/icon-clock.svg" alt="" aria-hidden="true">
+        <p>3 days left</p>
+      </li>
+    </ul>
 
-    <hr class="line"/>
-
-    <figure class="avatar">
-      <img src="./images/image-avatar.png" alt="avatar">
-      <figcaption>Creation of <span>Jules Wyvern</span></figcaption>
+    <figure class="author">
+      <img src="./images/image-avatar.png" alt="Jules Wyvern">
+      <figcaption>
+        Creation of <a href="#">Jules Wyvern</a>
+      </figcaption>
     </figure>
   
   </main>

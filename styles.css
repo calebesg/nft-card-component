@@ -1,13 +1,16 @@
+/* Global ==================================== */
+
 :root {
   --soft-blue:hsl(215, 51%, 70%);
   --cyan:hsl(178, 100%, 50%);
+  --alpha-cyan:hsl(178 100% 50% / 60%);
 
   --dark-blue-main:hsl(217, 54%, 11%);
   --dark-blue-card:hsl(216, 50%, 16%);
   --dark-blue-line:hsl(215, 32%, 27%);
   --white:hsl(0, 0%, 100%);
 
-  --trans-houver: all 200ms ease-in-out;
+  --trans-hover: all 300ms;
 }
 
 * {
@@ -18,7 +21,7 @@
 
 body {
   font-family: "Outfit", sans-serif;
-  font-size: 1.12rem;
+  font-size: 1.1rem;
   color: var(--soft-blue);
   min-height: 100vh;
   background-color: var(--dark-blue-main);
@@ -28,6 +31,17 @@ body {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+ul {
+  list-style: none;
+}
+
+/* CARD ===================================== */
+
 main {
   max-width: 350px;
   padding: 20px;
@@ -35,109 +49,107 @@ main {
   border-radius: 10px;
 }
 
-main>h1 {
+main h1 {
   opacity: 0;
   height: 0;
 }
 
-.nft-panel {
+.nft-image {
+  display: flex;
   position: relative;
-  display: flex;
 }
 
-.nft-panel>img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.nft-panel .img-wrapper {
+.nft-image::before {
+  content: "";
   position: absolute;
-  left: 0;
   top: 0;
-  width: 100%;
-  height: 100%;
+  left: 0;
+  right: 0;
+  bottom: 0;
   border-radius: 5px;
-  background-color: hsla(178, 100%, 50%, 0.2);
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
+  background: url(./images/icon-view.svg) center no-repeat var(--alpha-cyan);
   opacity: 0;
-  transition: var(--trans-houver);
+  transition: var(--trans-hover);
 }
 
-.nft-panel .img-wrapper:hover {
+.nft-image:hover::before {
   opacity: 1;
 }
 
-main h2 {
-  width: fit-content;
-  color: var(--white);
+.nft-image img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+/* CARD body ================================== */
+
+.title {
   margin: 20px 0;
-  transition: var(--trans-houver);
+  width: fit-content;
+  font-size: 1.4rem;
+  color: var(--white);;
+}
+
+.title a {
+  transition: var(--trans-hover);
   cursor: pointer;
 }
 
-main h2:hover {
+.title a:hover {
   color: var(--cyan);
 }
 
-main p {
+.description {
   font-weight: 300;
   padding-bottom: 20px;
 }
 
-main .data-post-info {
+.info {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 
-main .data-post-info figure {
+.info li {
   display: flex;
   align-items: center;
 }
 
-main .data-post-info figure img {
+.info img {
   margin-right: 6px;
 }
 
-.data-post-info figure figcaption strong {
+.info .price strong {
   color: var(--cyan);
   font-weight: 400;
 }
 
-main .line {
-  width: 100%;
-  height: 1px;
-  border: none;
-  margin: 15px 0;
-  background-color: var(--dark-blue-line);
-}
+/* CARD footer ================================== */
 
-.avatar {
+.author {
+  border-top: 1px solid var(--dark-blue-line);
+  padding: 15px 0;
+  
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
 }
 
-.avatar figcaption span {
-  color: var(--white);
-  transition: var(--trans-houver);
-  cursor: pointer;
-}
-
-.avatar figcaption span:hover {
-  color: var(--cyan);
-}
-
-.avatar img {
+.author img {
   max-width: 35px;
   padding: 1px;
   border: none;
   border-radius: 50%;
   background-color: var(--white);
   margin-right: 15px;
+}
+
+.author figcaption a {
+  color: var(--white);
+  transition: var(--trans-hover);
+  cursor: pointer;
+}
+
+.author figcaption a:hover {
+  color: var(--cyan);
 }
